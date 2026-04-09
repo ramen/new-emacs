@@ -1,0 +1,13 @@
+backups/
+auto-save-list/
+custom.el
+recentf
+local.el
+elpa/
+eln-cache/
+transient/
+tree-sitter/
+*.elc
+*~
+\#*\#
+.\#*
