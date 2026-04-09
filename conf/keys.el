@@ -2,6 +2,10 @@
 (global-set-key (kbd "<M-up>") 'enlarge-window)
 (global-set-key (kbd "<M-down>") 'shrink-window)
 
+(use-package goto-chg
+  :ensure t
+  :bind ("M-_" . goto-last-change))
+
 (global-set-key (kbd "<C-S-up>") 'scroll-down-line)
 (global-set-key (kbd "<C-S-down>") 'scroll-up-line)
 
