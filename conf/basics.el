@@ -3,6 +3,7 @@
 (set-face-attribute 'default nil :height 140)
 (setq inhibit-startup-screen t)
 (setq use-short-answers t)
+(delete-selection-mode 1)
 (load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil :background "#2b2b2b" :foreground "#d4d4d4")
 
