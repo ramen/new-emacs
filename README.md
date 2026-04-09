@@ -18,6 +18,16 @@ M-x treesit-install-language-grammar RET tsx RET
 
 Accept the defaults when prompted.
 
+## Nerd icons font
+
+doom-modeline uses nerd-icons for the modeline. Install the font on first setup:
+
+```
+M-x nerd-icons-install-fonts RET
+```
+
+This only needs to be done once per machine.
+
 ## Local configuration
 
 `local.el` is loaded last and ignored by git. Use it for machine-specific
