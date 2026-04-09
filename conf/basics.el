@@ -4,6 +4,7 @@
 (setq inhibit-startup-screen t)
 (setq use-short-answers t)
 (load-theme 'modus-vivendi t)
+(set-face-attribute 'default nil :background "#2b2b2b" :foreground "#d4d4d4")
 
 ;; Subtle visual bell — briefly flash the mode line
 (setq visible-bell nil)
