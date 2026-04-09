@@ -1,5 +1,6 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(set-face-attribute 'default nil :height 140)
 (setq inhibit-startup-screen t)
 (setq use-short-answers t)
 (load-theme 'modus-vivendi t)
