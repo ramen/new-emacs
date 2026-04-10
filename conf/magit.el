@@ -3,6 +3,8 @@
 (use-package magit
   :ensure t
   :bind ("C-x g" . magit-status)
+  :custom
+  (magit-revision-insert-related-refs-display-alist '((merged . nil)))
   :config
   (transient-suffix-put 'magit-diff "r" :key "d")
   (transient-suffix-put 'magit-fetch "u" :key "f")
