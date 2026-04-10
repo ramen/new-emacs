@@ -1,11 +1,17 @@
-(menu-bar-mode -1)
-(tool-bar-mode -1)
+;; UI chrome
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; Appearance
 (set-face-attribute 'default nil :height 140)
+(load-theme 'modus-vivendi t)
+(set-face-attribute 'default nil :background "#2b2b2b" :foreground "#d4d4d4")
+
+;; Behavior
 (setq inhibit-startup-screen t)
 (setq use-short-answers t)
 (delete-selection-mode 1)
-(load-theme 'modus-vivendi t)
-(set-face-attribute 'default nil :background "#2b2b2b" :foreground "#d4d4d4")
 
 ;; Subtle visual bell — briefly flash the mode line
 (setq visible-bell nil)
