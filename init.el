@@ -1,3 +1,7 @@
+;;; init.el --- Emacs init script
+
+;; Local modifications will be loaded from local.el, if present.
+
 ;; Custom file — keep custom-set-variables/faces out of init.el
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
