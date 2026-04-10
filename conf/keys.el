@@ -29,3 +29,7 @@
 ;; Editing
 (global-set-key (kbd "M-)") 'close-open-paren)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
+
+;; Line-oriented commands
+(global-set-key (kbd "<home>") 'move-beginning-of-line)
+(global-set-key (kbd "<end>") 'move-end-of-line)
