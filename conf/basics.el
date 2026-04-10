@@ -4,7 +4,24 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; Appearance
-(set-face-attribute 'default nil :height 140)
+(defun db/preferred-font ()
+  "Return the best available font family for the current platform."
+  (seq-find (lambda (f) (member f (font-family-list)))
+            (pcase system-type
+              ('darwin       '("SF Mono" "Menlo" "Monaco"))
+              ('windows-nt   '("Cascadia Code" "Consolas"))
+              (_             '("JetBrains Mono" "Source Code Pro" "DejaVu Sans Mono")))))
+
+(defun db/preferred-height ()
+  "Return a font height appropriate for the current platform."
+  (pcase system-type
+    ('darwin     140)   ; macOS Retina: 14pt
+    ('windows-nt 110)   ; Windows: 11pt
+    (_           110)))
+
+(set-face-attribute 'default nil
+                    :family (db/preferred-font)
+                    :height (db/preferred-height))
 (load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil :background "#2b2b2b" :foreground "#d4d4d4")
 
