@@ -5,6 +5,7 @@ recentf
 local.el
 elpa/
 eln-cache/
+projects
 server/
 transient/
 tree-sitter/
