@@ -1,5 +1,7 @@
 ;;; modeline.el --- Modeline configuration
 
+(column-number-mode 1)
+
 (use-package nerd-icons
   :ensure t)
 
