@@ -1,3 +1,7 @@
+;;; keys.el --- Custom key bindings
+
+(require 'misc) ; for zap-up-to-char
+
 ;; Navigation
 (global-set-key (kbd "M-`") 'next-error)
 (use-package goto-chg
@@ -24,3 +28,4 @@
 
 ;; Editing
 (global-set-key (kbd "M-)") 'close-open-paren)
+(global-set-key (kbd "M-z") 'zap-up-to-char)

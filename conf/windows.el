@@ -1,4 +1,5 @@
-;; Windows-specific configuration
+;;; windows.el --- Windows-specific configuration
+
 (when (eq system-type 'windows-nt)
   (setq find-ls-option '("-exec ls -ld {} \\;" . "-ld"))
   (setq find-program "wsl find")

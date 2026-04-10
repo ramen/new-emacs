@@ -1,2 +1,7 @@
+;;; server.el --- Start Emacs server if not running already
+
+(require 'warnings)
+
 (when window-system
-  (server-start))
+  (let ((warning-minimum-level :error))
+    (server-start)))

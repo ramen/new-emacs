@@ -1,3 +1,5 @@
+;;; defuns.el --- Custom functions
+
 (defun indent-current-region ()
   "Indent the current region by the current tab width."
   (interactive)

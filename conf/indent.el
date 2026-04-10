@@ -1,3 +1,5 @@
+;;; indent.el --- Indentation
+
 ;; Default to 2 spaces, no tabs
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)

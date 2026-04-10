@@ -1,3 +1,5 @@
+;;; modeline.el --- Modeline configuration
+
 (use-package nerd-icons
   :ensure t)
 
