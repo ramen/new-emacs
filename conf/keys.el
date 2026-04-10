@@ -15,19 +15,21 @@
 ;; Window management
 (global-set-key (kbd "<M-up>") 'enlarge-window)
 (global-set-key (kbd "<M-down>") 'shrink-window)
-(global-set-key (kbd "s-[") 'shrink-first-window-horizontally)
-(global-set-key (kbd "s-]") 'enlarge-first-window-horizontally)
+(global-set-key (kbd "s-[") 'db/shrink-first-window-horizontally)
+(global-set-key (kbd "s-]") 'db/enlarge-first-window-horizontally)
 (windmove-default-keybindings)
 
 ;; Indentation
-(global-set-key (kbd "<M-right>") 'indent-current-region)
-(global-set-key (kbd "<M-left>") 'dedent-current-region)
+(global-set-key (kbd "<M-right>") 'db/indent-current-region)
+(global-set-key (kbd "<M-left>") 'db/dedent-current-region)
 
 ;; Shell
 (global-set-key (kbd "C-x m") 'shell)
 
 ;; Editing
+(global-set-key (kbd "M-#") 'db/comment-line)
 (global-set-key (kbd "M-)") 'close-open-paren)
+(global-set-key (kbd "M-+") 'db/duplicate-line-or-region)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 ;; Line-oriented commands
