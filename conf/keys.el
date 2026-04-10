@@ -11,6 +11,8 @@
 ;; Window management
 (global-set-key (kbd "<M-up>") 'enlarge-window)
 (global-set-key (kbd "<M-down>") 'shrink-window)
+(global-set-key (kbd "s-[") 'shrink-first-window-horizontally)
+(global-set-key (kbd "s-]") 'enlarge-first-window-horizontally)
 (windmove-default-keybindings)
 
 ;; Indentation
