@@ -23,7 +23,8 @@
                     :family (db/preferred-font)
                     :height (db/preferred-height))
 (load-theme 'modus-vivendi t)
-(set-face-attribute 'default nil :background "#1b1b1b" :foreground "#d4d4d4")
+(when window-system
+  (set-face-attribute 'default nil :background "#1b1b1b" :foreground "#d4d4d4"))
 
 ;; Behavior
 (setq inhibit-startup-screen t)
