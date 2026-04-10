@@ -21,3 +21,6 @@
 
 ;; Shell
 (global-set-key (kbd "C-x m") 'shell)
+
+;; Editing
+(global-set-key (kbd "M-)") 'close-open-paren)
