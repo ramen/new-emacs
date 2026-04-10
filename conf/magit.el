@@ -11,3 +11,7 @@
   (transient-suffix-put 'magit-pull "u" :key "F")
   (transient-suffix-put 'magit-push "u" :key "P")
   (transient-suffix-put 'magit-rebase "e" :key "r"))
+
+;; Stop stealing C-tab
+(with-eval-after-load 'magit
+  (define-key magit-mode-map (kbd "C-<tab>") nil))
