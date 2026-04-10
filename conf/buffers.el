@@ -1,3 +1,5 @@
+;;; buffers.el --- Buffer management
+
 (recentf-mode 1)
 
 (use-package vertico

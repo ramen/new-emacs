@@ -1,3 +1,5 @@
+;;; basics.el --- Basic editor settings
+
 ;; UI chrome
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
