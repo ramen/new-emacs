@@ -5,7 +5,18 @@
   (setq-local comment-start "// ")
   (setq-local comment-end "")
   (setq-local comment-start-skip "// *")
-  (let ((lang (if (eq major-mode 'c++-ts-mode) 'cpp 'c)))
+  (let* ((lang    (if (eq major-mode 'c++-ts-mode) 'cpp 'c))
+         ;; Regex matching control-flow statement node types
+         (ctrl-re "\\(if\\|for\\|while\\|do\\)_statement")
+         ;; Anchor: first non-whitespace column on the grandparent's start line.
+         ;; This handles multi-line conditions where { ends up on a continuation
+         ;; line far from the controlling keyword.
+         (gpbol   (lambda (_node parent _bol)
+                    (save-excursion
+                      (goto-char (treesit-node-start
+                                  (treesit-node-parent parent)))
+                      (back-to-indentation)
+                      (point)))))
     (setq-local treesit-simple-indent-rules
                 (mapcar
                  (lambda (entry)
@@ -13,9 +24,13 @@
                        `(,lang .
                          (;; Preprocessor directives flush left
                           ((node-is "^preproc_") (lambda (_n _p bol) bol) 0)
-                          ;; Continuation parameters indented one level, closing ) at function column
+                          ;; Continuation parameters: one level in, closing ) at function column
                           ((n-p-gp ")" "parameter_list" nil) parent-bol 0)
                           ((parent-is "parameter_list") parent-bol c-ts-mode-indent-offset)
+                          ;; Control-flow compound body: anchor to keyword line, not to the {-line
+                          ((n-p-gp "{" "compound_statement" ,ctrl-re) ,gpbol 0)
+                          ((n-p-gp "}" "compound_statement" ,ctrl-re) ,gpbol 0)
+                          ((n-p-gp nil "compound_statement" ,ctrl-re) ,gpbol c-ts-mode-indent-offset)
                           ;; No extra indent inside C++ namespace bodies
                           ,@(when (eq lang 'cpp)
                               '(((n-p-gp nil "declaration_list" "namespace_definition")
