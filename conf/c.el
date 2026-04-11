@@ -44,6 +44,11 @@
                           ;; Function body: anchor to function_definition line, not the { line
                           ((n-p-gp "}" "compound_statement" "function_definition") ,gpbol 0)
                           ((n-p-gp nil "compound_statement" "function_definition") ,gpbol c-ts-mode-indent-offset)
+                          ;; Lambda passed as call arg: one level in from the call site line
+                          ((n-p-gp "lambda_expression" "argument_list" nil) parent-bol c-ts-mode-indent-offset)
+                          ;; Lambda body: anchor to the lambda's own line
+                          ((n-p-gp "}" "compound_statement" "lambda_expression") ,gpbol 0)
+                          ((n-p-gp nil "compound_statement" "lambda_expression") ,gpbol c-ts-mode-indent-offset)
                           ;; No extra indent inside C++ namespace bodies
                           ,@(when (eq lang 'cpp)
                               '(((n-p-gp nil "declaration_list" "namespace_definition")
