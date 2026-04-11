@@ -17,4 +17,7 @@
                  '(cpp "https://github.com/tree-sitter/tree-sitter-cpp" "v0.21.0" "src"))
     (add-to-list 'treesit-language-source-alist
                  '(rust "https://github.com/tree-sitter/tree-sitter-rust" "v0.21.2" "src")))
-  (global-treesit-auto-mode))
+  (global-treesit-auto-mode)
+  ;; Keep C/C++ on classic cc-mode; tree-sitter variants still available manually
+  (dolist (mode '(c-mode c++-mode))
+    (setq major-mode-remap-alist (assq-delete-all mode major-mode-remap-alist))))
