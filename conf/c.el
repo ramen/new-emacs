@@ -27,6 +27,9 @@
                           ;; Continuation parameters: one level in, closing ) at function column
                           ((n-p-gp ")" "parameter_list" nil) parent-bol 0)
                           ((parent-is "parameter_list") parent-bol c-ts-mode-indent-offset)
+                          ;; Template type arguments: one level in, closing > at declaration column
+                          ((n-p-gp ">" "template_argument_list" nil) parent-bol 0)
+                          ((parent-is "template_argument_list") parent-bol c-ts-mode-indent-offset)
                           ;; Control-flow compound body: anchor to keyword line, not to the {-line
                           ((n-p-gp "{" "compound_statement" ,ctrl-re) ,gpbol 0)
                           ((n-p-gp "}" "compound_statement" ,ctrl-re) ,gpbol 0)
