@@ -7,6 +7,7 @@ elpa/
 eln-cache/
 projects
 server/
+tramp
 transient/
 tree-sitter/
 *.elc
