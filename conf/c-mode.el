@@ -6,7 +6,6 @@
 
             (c-set-offset 'access-label '-)
             (c-set-offset 'arglist-close 0)
-            (c-set-offset 'arglist-cont-nonempty '+)
             (c-set-offset 'arglist-intro '+)
             (c-set-offset 'case-label '+)
             (c-set-offset 'innamespace 0)
