@@ -9,8 +9,10 @@
   :bind ("M-_" . goto-last-change))
 
 ;; Scrolling
-(global-set-key (kbd "<C-S-up>") 'scroll-down-line)
 (global-set-key (kbd "<C-S-down>") 'scroll-up-line)
+(global-set-key (kbd "<C-S-up>") 'scroll-down-line)
+(global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+(global-set-key (kbd "<mouse-5>") 'scroll-up-line)
 
 ;; Window management
 (global-set-key (kbd "<M-up>") 'enlarge-window)
