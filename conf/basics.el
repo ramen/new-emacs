@@ -10,14 +10,14 @@
   "Return the best available font family for the current platform."
   (seq-find (lambda (f) (member f (font-family-list)))
             (pcase system-type
-              ('darwin       '("SF Mono" "Menlo" "Monaco"))
+              ('darwin       '("Menlo" "Monaco"))
               ('windows-nt   '("Consolas" "Cascadia Code"))
               (_             '("JetBrains Mono" "Source Code Pro" "DejaVu Sans Mono")))))
 
 (defun db/preferred-height ()
   "Return a font height appropriate for the current platform."
   (pcase system-type
-    ('darwin     140)   ; macOS Retina: 14pt
+    ('darwin     130)   ; macOS Retina: 13pt
     ('windows-nt 110)   ; Windows: 11pt
     (_           110)))
 
