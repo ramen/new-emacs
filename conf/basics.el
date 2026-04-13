@@ -18,7 +18,7 @@
   "Return a font height appropriate for the current platform."
   (pcase system-type
     ('darwin     140)   ; macOS Retina: 14pt
-    ('windows-nt 110)   ; Windows: 11pt
+    ('windows-nt 100)   ; Windows: 10pt
     (_           110)))
 
 (set-face-attribute 'default nil
