@@ -11,14 +11,14 @@
   (seq-find (lambda (f) (member f (font-family-list)))
             (pcase system-type
               ('darwin       '("SF Mono" "Menlo" "Monaco"))
-              ('windows-nt   '("Cascadia Code" "Consolas"))
+              ('windows-nt   '("Consolas" "Cascadia Code"))
               (_             '("JetBrains Mono" "Source Code Pro" "DejaVu Sans Mono")))))
 
 (defun db/preferred-height ()
   "Return a font height appropriate for the current platform."
   (pcase system-type
     ('darwin     140)   ; macOS Retina: 14pt
-    ('windows-nt 100)   ; Windows: 10pt
+    ('windows-nt 110)   ; Windows: 11pt
     (_           110)))
 
 (set-face-attribute 'default nil
