@@ -15,3 +15,9 @@
 ;; Stop stealing C-tab
 (with-eval-after-load 'magit
   (define-key magit-mode-map (kbd "C-<tab>") nil))
+
+;; Use enter key to view diffs in vc-change-log
+(add-hook 'log-view-mode-hook
+          (lambda ()
+            (define-key log-view-mode-map (kbd "RET")
+              'log-view-diff-changeset)))
