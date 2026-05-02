@@ -6,6 +6,7 @@
   :custom
   (magit-revision-insert-related-refs-display-alist '((merged . nil)))
   :config
+  (transient-suffix-put 'magit-diff "d" :key "D")
   (transient-suffix-put 'magit-diff "r" :key "d")
   (transient-suffix-put 'magit-fetch "u" :key "f")
   (transient-suffix-put 'magit-pull "u" :key "F")
