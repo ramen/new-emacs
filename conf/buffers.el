@@ -12,4 +12,5 @@
 
 (use-package consult
   :ensure t
+  :custom (consult-preview-key nil)
   :bind ("C-x b" . consult-buffer))
