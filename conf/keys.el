@@ -28,7 +28,7 @@
 (global-set-key (kbd "<M-left>") 'db/dedent-current-region)
 
 ;; Shell
-(global-set-key (kbd "C-x m") 'shell)
+(global-set-key (kbd "C-x m") (kbd "C-x 4 4 M-x shell RET"))
 
 ;; Editing
 (global-set-key (kbd "M-#") 'db/comment-line)
