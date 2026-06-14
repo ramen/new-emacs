@@ -29,6 +29,7 @@
 (global-set-key (kbd "C-x m") (kbd "C-x 4 4 M-x shell RET"))
 
 ;; Editing
+(global-set-key (kbd "C-M-SPC") 'db/mark-line)
 (global-set-key (kbd "M-#") 'db/comment-line)
 (global-set-key (kbd "M-)") 'close-open-paren)
 (global-set-key (kbd "M-+") 'db/duplicate-line-or-region)

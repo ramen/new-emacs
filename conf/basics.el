@@ -32,9 +32,12 @@
   (set-face-attribute 'default nil :background "unspecified-bg" :foreground "unspecified-fg"))
 
 ;; Behavior
-(setq inhibit-startup-screen t)
-(setq use-short-answers t)
 (delete-selection-mode 1)
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
+(setq sentence-end-double-space nil)
+(setq use-short-answers t)
+(setq-default fill-column 78)
 
 ;; Subtle visual bell — briefly flash the mode line
 (setq visible-bell nil)

@@ -56,3 +56,10 @@
   "Dedent the current region by the current tab width."
   (interactive)
   (indent-rigidly (region-beginning) (region-end) (- tab-width)))
+
+(defun db/mark-line (arg)
+  "Mark the entire current line regardless of cursor position."
+  (interactive "p")
+  (beginning-of-line nil)
+  (set-mark-command nil)
+  (forward-line arg))
