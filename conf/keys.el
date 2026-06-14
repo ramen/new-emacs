@@ -17,8 +17,6 @@
 ;; Window management
 (global-set-key (kbd "<M-up>") 'enlarge-window)
 (global-set-key (kbd "<M-down>") 'shrink-window)
-(global-set-key (kbd "s-[") 'db/shrink-first-window-horizontally)
-(global-set-key (kbd "s-]") 'db/enlarge-first-window-horizontally)
 (global-set-key (kbd "<C-tab>") 'next-window-any-frame)
 (global-set-key (kbd "<C-S-tab>") 'previous-window-any-frame)
 (windmove-default-keybindings)
