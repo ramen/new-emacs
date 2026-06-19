@@ -12,5 +12,9 @@
 
 (use-package consult
   :ensure t
-  :custom (consult-preview-key nil)
-  :bind ("C-x b" . consult-buffer))
+  :bind ("C-x b" . consult-buffer)
+  :config
+  (consult-customize
+   consult-buffer
+   consult-project-buffer
+   :preview-key nil))
