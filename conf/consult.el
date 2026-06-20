@@ -1,4 +1,4 @@
-;;; buffers.el --- Buffer management
+;;; consult.el --- Consult completion
 
 (recentf-mode 1)
 
@@ -12,7 +12,8 @@
 
 (use-package consult
   :ensure t
-  :bind ("C-x b" . consult-buffer)
+  :bind (("C-x b" . consult-buffer)
+         ("C-c g" . consult-ripgrep))
   :config
   (consult-customize
    consult-buffer
