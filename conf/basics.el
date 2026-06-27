@@ -48,4 +48,5 @@
 
 ;; Mouse support in terminal
 (unless window-system
+  (mouse-wheel-mode 1)
   (xterm-mouse-mode 1))
