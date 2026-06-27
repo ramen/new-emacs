@@ -39,11 +39,3 @@
 ;; Line-oriented commands
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
 (global-set-key (kbd "<end>") 'move-end-of-line)
-(global-set-key (kbd "M-g") 'goto-line)
-
-;; During isearch, C-o exits and opens consult-line with the current search term
-(define-key isearch-mode-map (kbd "C-o") (lambda ()
-  (interactive)
-  (let ((query isearch-string))
-    (isearch-exit)
-    (consult-line query))))
