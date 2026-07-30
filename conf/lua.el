@@ -1,4 +1,4 @@
 ;;; lua.el --- Lua mode configuration
 
-(use-package lua-ts-mode
+(use-package lua-mode
   :mode "\\.lua\\'")
