@@ -11,6 +11,9 @@
   (transient-suffix-put 'magit-fetch "u" :key "f")
   (transient-suffix-put 'magit-pull "u" :key "F")
   (transient-suffix-put 'magit-push "u" :key "P")
+  ;; Keep the old `P - u P' push workflow available.  Magit now hides
+  ;; --set-upstream at transient level 5, above the default level.
+  (transient-suffix-put 'magit-push "-u" :level 4)
   (transient-suffix-put 'magit-rebase "e" :key "r"))
 
 ;; Stop stealing C-tab
