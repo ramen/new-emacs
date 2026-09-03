@@ -4,6 +4,7 @@
   :ensure t
   :bind ("C-x g" . magit-status)
   :custom
+  (magit-diff-visit-prefer-worktree t)
   (magit-revision-insert-related-refs-display-alist '((merged . nil)))
   :config
   (transient-suffix-put 'magit-diff "d" :key "D")
