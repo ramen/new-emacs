@@ -17,9 +17,17 @@
   (transient-suffix-put 'magit-push "-u" :level 4)
   (transient-suffix-put 'magit-rebase "e" :key "r"))
 
-;; Stop stealing C-tab
+;; Stop stealing keyboard shortcuts
 (with-eval-after-load 'magit
-  (define-key magit-mode-map (kbd "C-<tab>") nil))
+  (define-key magit-mode-map (kbd "C-<tab>") nil)
+  (define-key magit-mode-map (kbd "C-1") 'magit-section-show-level-1-all)
+  (define-key magit-mode-map (kbd "C-2") 'magit-section-show-level-2-all)
+  (define-key magit-mode-map (kbd "C-3") 'magit-section-show-level-3-all)
+  (define-key magit-mode-map (kbd "C-4") 'magit-section-show-level-4-all)
+  (define-key magit-mode-map (kbd "M-1") 'digit-argument)
+  (define-key magit-mode-map (kbd "M-2") 'digit-argument)
+  (define-key magit-mode-map (kbd "M-3") 'digit-argument)
+  (define-key magit-mode-map (kbd "M-4") 'digit-argument))
 
 ;; Use enter key to view diffs in vc-change-log
 (add-hook 'log-view-mode-hook
