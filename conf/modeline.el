@@ -1,4 +1,4 @@
-;;; modeline.el --- Modeline configuration
+;;; modeline.el --- Modeline configuration  -*- lexical-binding: t; -*-
 
 (column-number-mode 1)
 

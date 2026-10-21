@@ -1,4 +1,4 @@
-;;; init.el --- Emacs init script
+;;; init.el --- Emacs init script  -*- lexical-binding: t; -*-
 
 ;; Local modifications will be loaded from local.el, if present.
 

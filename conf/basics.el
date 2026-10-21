@@ -1,4 +1,4 @@
-;;; basics.el --- Basic editor settings
+;;; basics.el --- Basic editor settings  -*- lexical-binding: t; -*-
 
 ;; UI chrome
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))

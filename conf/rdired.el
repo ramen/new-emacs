@@ -1,4 +1,4 @@
-;;; rdired.el --- Recursive dired command
+;;; rdired.el --- Recursive dired command  -*- lexical-binding: t; -*-
 
 (defun rdired (dir)
   "Recursive dired. Runs find-dired, passing an expression to the find command

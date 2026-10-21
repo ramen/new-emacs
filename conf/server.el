@@ -1,4 +1,4 @@
-;;; server.el --- Start Emacs server if not running already
+;;; server.el --- Start Emacs server if not running already  -*- lexical-binding: t; -*-
 
 (require 'warnings)
 

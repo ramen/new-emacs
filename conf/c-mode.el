@@ -1,4 +1,4 @@
-;;; c-mode.el --- c/c++ style configuration
+;;; c-mode.el --- c/c++ style configuration  -*- lexical-binding: t; -*-
 
 (add-hook 'c-mode-common-hook
           (lambda ()

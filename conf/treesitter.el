@@ -1,4 +1,4 @@
-;;; treesitter.el --- Tree-sitter setup via treesit-auto
+;;; treesitter.el --- Tree-sitter setup via treesit-auto  -*- lexical-binding: t; -*-
 
 (use-package treesit-auto
   :ensure t

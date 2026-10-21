@@ -1,4 +1,4 @@
-;;; indent.el --- Indentation
+;;; indent.el --- Indentation  -*- lexical-binding: t; -*-
 
 ;; Default to 2 spaces, no tabs
 (setq-default indent-tabs-mode nil)

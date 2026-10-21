@@ -1,4 +1,4 @@
-;;; svelte.el --- Svelte mode configuration
+;;; svelte.el --- Svelte mode configuration  -*- lexical-binding: t; -*-
 
 ;; Install svelte-ts-mode from GitHub (not yet in MELPA)
 (unless (package-installed-p 'svelte-ts-mode)

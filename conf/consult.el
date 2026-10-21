@@ -1,4 +1,4 @@
-;;; consult.el --- Consult completion
+;;; consult.el --- Consult completion  -*- lexical-binding: t; -*-
 
 (recentf-mode 1)
 

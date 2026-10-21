@@ -1,4 +1,4 @@
-;;; windows.el --- Windows-specific configuration
+;;; windows.el --- Windows-specific configuration  -*- lexical-binding: t; -*-
 
 (when (eq system-type 'windows-nt)
   (setq frame-title-format "%b")

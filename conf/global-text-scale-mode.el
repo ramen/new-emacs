@@ -1,4 +1,4 @@
-;;; global-text-scale-mode.el --- Adjust font size in all buffers.
+;;; global-text-scale-mode.el --- Adjust font size in all buffers.  -*- lexical-binding: t; -*-
 
 ;; http://www.emacswiki.org/emacs/GlobalTextScaleMode
 

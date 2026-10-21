@@ -1,4 +1,4 @@
-;;; defuns.el --- Custom functions
+;;; defuns.el --- Custom functions  -*- lexical-binding: t; -*-
 
 (defun db/comment-line (arg)
   "Comment or uncomment the current line."

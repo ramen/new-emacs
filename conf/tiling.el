@@ -1,4 +1,4 @@
-;;; tiling.el --- Tiling (xmonad-style) window management bindings
+;;; tiling.el --- Tiling (xmonad-style) window management bindings  -*- lexical-binding: t; -*-
 
 (global-set-key (kbd "<S-s-return>") 'split-window-dwim)
 (global-set-key (kbd "<s-return>") 'swap-with-largest-window)

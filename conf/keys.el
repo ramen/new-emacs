@@ -1,4 +1,4 @@
-;;; keys.el --- Custom key bindings
+;;; keys.el --- Custom key bindings  -*- lexical-binding: t; -*-
 
 (require 'misc) ; for zap-up-to-char
 

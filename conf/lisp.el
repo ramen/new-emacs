@@ -1,4 +1,4 @@
-;;; lisp.el --- Lisp mode configuration
+;;; lisp.el --- Lisp mode configuration  -*- lexical-binding: t; -*-
 
 ;; Use lisp-interaction-mode by default for Emacs Lisp files.
 (add-to-list 'auto-mode-alist '("\\.el$" . lisp-interaction-mode))

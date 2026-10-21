@@ -1,4 +1,4 @@
-;;; magit.el --- Magit customizations
+;;; magit.el --- Magit customizations  -*- lexical-binding: t; -*-
 
 (use-package magit
   :ensure t

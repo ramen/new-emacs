@@ -1,4 +1,4 @@
-;;; close-open-paren.el --- Close the nearest open parenthesis.
+;;; close-open-paren.el --- Close the nearest open parenthesis.  -*- lexical-binding: t; -*-
 
 (defconst all-paren-syntax-table
   (let ((table (make-syntax-table)))

@@ -1,4 +1,4 @@
-;;; mac.el --- Mac-specific configuration
+;;; mac.el --- Mac-specific configuration  -*- lexical-binding: t; -*-
 
 (when (eq system-type 'darwin)
   (setq mac-option-modifier 'super)

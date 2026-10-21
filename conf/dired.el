@@ -1,4 +1,4 @@
-;;; dired.el --- Dired mode customizations
+;;; dired.el --- Dired mode customizations  -*- lexical-binding: t; -*-
 
 (with-eval-after-load 'dired
   (define-key dired-mode-map "." 'dired-up-directory)

@@ -1,4 +1,4 @@
-;;; typescript.el --- TypeScript mode configuration
+;;; typescript.el --- TypeScript mode configuration  -*- lexical-binding: t; -*-
 
 ;; Use tree-sitter modes for TypeScript and TSX
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))

@@ -1,4 +1,4 @@
-;;; grep.el --- Grep configuration
+;;; grep.el --- Grep configuration  -*- lexical-binding: t; -*-
 
 (with-eval-after-load 'grep
   (add-hook 'grep-mode-hook (lambda () (setq-local truncate-lines t)))
