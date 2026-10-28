@@ -7,6 +7,10 @@
   (magit-diff-visit-prefer-worktree t)
   (magit-revision-insert-related-refs-display-alist '((merged . nil)))
   :config
+  ;; Prefer the live file even in committed diffs, where
+  ;; `magit-diff-visit-prefer-worktree' does not apply.
+  (define-key magit-diff-section-map [remap magit-visit-thing]
+              #'magit-diff-visit-worktree-file)
   (transient-suffix-put 'magit-diff "d" :key "D")
   (transient-suffix-put 'magit-diff "r" :key "d")
   (transient-suffix-put 'magit-fetch "u" :key "f")
